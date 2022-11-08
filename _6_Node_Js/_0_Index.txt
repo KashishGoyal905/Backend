@@ -1,0 +1,27 @@
+#What is Node.js:
+    open source, cross platform runtime environment for development of server side and networming applications.
+    javascript runtime environment.
+
+#process.argv:
+    it helps in taking input from the user. 
+    first two arguments are:
+            1) first is where is node present.
+            2) which file i9s node running.
+    acess other arguments like array.
+
+#Modules:
+    A module in JavaScript is just a file containing related code. 
+        if you export functions by using module.exports.something in one file and want to use
+        it in another file you have to require that file.
+
+#Server:
+     a server is a piece of computer hardware or software that provides
+     functionality for other programs or devices, called "clients".
+
+# creating our first server using node and npm 
+    1) npm init
+    2) using http package
+    3) require http, assign port, run the server http.createServer(), then listen to print a response
+       pass a function to createServer and res.end().
+    4) fs to read and write file or render html file.
+    5) render multiple file using switch case and fs.
