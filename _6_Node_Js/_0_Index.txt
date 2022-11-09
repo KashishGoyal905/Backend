@@ -25,3 +25,30 @@
        pass a function to createServer and res.end().
     4) fs to read and write file or render html file.
     5) render multiple file using switch case and fs.
+
+# FrameWork
+   A web development framework is a set of resources and tools for software developers
+   to build and manage web applications, web services and websites. 
+
+# Understanding MVC
+    Model Veiw Controls
+        browser request for some url for which it will go to the router, the specific router
+        is map to the specific controller function, then for data it req model to fetch data from
+        the db, then model give bsck data to the controller, and controleer then convert it into the html and
+        return it to the browser.
+
+# Why Express.js
+    node js web application framework that provides broad features for building web and mobile applications.
+
+#setting up contact list
+    1) npm init
+    2) npm i express
+    3) require express, assign port, start express, then app.get to the url, then listen to the port.
+    4) there are get,post,put,patch,delete type of requests.
+
+    #Template Engine:
+
+    Ejs:
+        1) npm i express
+        2) required path, set the view engine, set the views folder path,render the ejs file.
+
