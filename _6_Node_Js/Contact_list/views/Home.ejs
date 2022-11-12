@@ -8,10 +8,35 @@
     <title>
         <%= title %>
     </title>
+    <!-- link for css file -->
+    <link rel="stylesheet" href="/css/home.css">
 </head>
 
 <body>
     <h1>rendered from ejs</h1>
+    <!-- printing contacts inside the array storage-->
+    <div>
+        <ul>
+            <% for(let i of contact_list){ %>
+                <div>
+                    <li>
+                        <%= i.name %>
+                            <%= i.phone %>
+                            <!-- to delete a contact from the list-->
+                                <a href="/delete-contact/<%= i._id%>">delete</a>
+                    </li>
+                </div>
+                <% } %>
+        </ul>
+    </div>
+    <!-- form to add our contacts to the list -->
+    <form action="/create-contact" method="post">
+        <input type="text" name="name" placeholder="Enter name" required>
+        <input type="number" name="phone" placeholder="Enter phone" required>
+        <button type="submit">Add Contact</button>
+    </form>
+    <!-- link for static js file -->
+    <script type="text/javascript" src="/js/home.js"></script>
 </body>
 
 </html>
