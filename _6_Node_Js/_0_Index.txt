@@ -49,6 +49,55 @@
     #Template Engine:
 
     Ejs:
-        1) npm i express
+        1) npm i ejs.
         2) required path, set the view engine, set the views folder path,render the ejs file.
 
+    #creating temporaray storage using array
+
+        1) create array of objects then passed it to the ejs file.
+        2) rendered data inside the array using let of in ejs file.
+        3) create a form in ejs file to add new contacts in the array.
+        4) make a route to handle the data submitted via the form.
+        5) now after the data is submitted via the form to the server side or to the action route, the data
+           is encoded and to decode we need a parser, the data is received in the req of the route, then it is
+           parsed and send it as response.
+        6) now we use a middleware to parse the encoded data, express.urlencoded(), then we push thae data into
+           the array. and redirct to the home page.
+    
+    #What is a middleware
+        middleware is something which have acees to req and res of a request and can reprocess it and then
+        can send it to his route.
+
+    # acessing static files:
+        to acess static files like css and js. we will use a middleware express.static(). and folder
+        name as assests. as whenver there is a need of staic files. it will be found inside th assests folder.
+
+    # how to delete a contact
+        now to delete a contact we use params.
+        we send phone number using params from the form to the route then find index and slice it and then return.
+           
+    #Dtabases
+        A database is an organized collection of structured information, or data, typically stored
+        electronically somwhere else and express interact with it.
+        here we will interact with odm(object document mapper) and we need not learn mongod.
+        odm is a layer written above mongodb by which we can interact with odm and odm intereact with mongodb.
+        her odm is mongoose.
+
+        #Steps:
+            1) npm i mongoose.
+            2) then make a folder named config and create a file inside it to establish a connection between
+               the mongoose and the database.
+            3) require it,make connection,acquire connection,check connection.
+            4) require it in the main file.
+            5) make a schema for our databse.
+            6) require mongoose, make a schema, darz it inside a name , export, require it in the main file.
+        
+        # populate inside the db
+            we need to use create method over the db to push data inside the db.
+            we push it then we need a functin to check if it there is an error or not then redirect.
+
+        # print the data inside the db
+            find the contacts then an error function then pass it to the home file as locals.
+
+        # deleting the data:
+            take the id from the contact and delete by method and then redirect.
