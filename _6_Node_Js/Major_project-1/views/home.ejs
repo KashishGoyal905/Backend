@@ -1,12 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
-    <h1>rendered from the ejs file</h1>
+    <div class="container">
+        <h1 id="heading">Todo App</h1>
+        <hr>
+        <label for="Description">Description</label>
+        <br>
+        <input type="text" id="Description" name="Description" placeholder="What do you nedd to do?">
+        <hr>
+        <div class="category">
+            <div class="dropdown">
+                <span>Category</span>
+                <br>
+                <label for="category1">Choose a category:</label>
+                <select name="category1" id="category1">
+                    <option value="volvo">Personal</option>
+                    <option value="saab">Work</option>
+                    <option value="mercedes">School</option>
+                    <option value="audi">Cleaning</option>
+                    <option value="audi">Other</option>
+                </select>
+            </div>
+
+            <div class="date">
+                <span>Due Date</span>
+                <br>
+                <input type="date">
+            </div>
+            <hr>
+        </div>
+        <div>
+            <hr>
+            <button class="task" type="submit">+ Add Task</button>
+            <hr>
+        </div>
+    </div>
+
+    <div class="tasks">
+        
+    </div>
 </body>
+
 </html>

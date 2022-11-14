@@ -6,8 +6,13 @@ const port = 8000;
 app.set('view engine', 'ejs');
 app.set('views' , './views');
 
+// requiring the connection between mongoose and mongodb
+const db = require('./config/mongoose');
+// to use static files
+app.use(express.static('./assets'));
 // ṣending all the request to the home router
 app.use('/', require('./routes'));
+
 
 
 app.listen(port, function (err) {
