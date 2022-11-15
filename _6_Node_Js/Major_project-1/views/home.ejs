@@ -14,40 +14,55 @@
     <div class="container">
         <h1 id="heading">Todo App</h1>
         <hr>
-        <label for="Description">Description</label>
-        <br>
-        <input type="text" id="Description" name="Description" placeholder="What do you nedd to do?">
-        <hr>
-        <div class="category">
-            <div class="dropdown">
-                <span>Category</span>
-                <br>
-                <label for="category1">Choose a category:</label>
-                <select name="category1" id="category1">
-                    <option value="volvo">Personal</option>
-                    <option value="saab">Work</option>
-                    <option value="mercedes">School</option>
-                    <option value="audi">Cleaning</option>
-                    <option value="audi">Other</option>
-                </select>
-            </div>
+        <form action="/create-task" method="post">
+            <label for="Description">Description</label>
+            <br>
+            <input type="text" id="Description" name="Description" placeholder="What do you nedd to do?">
+            <hr>
+            <div class="category">
+                <div class="dropdown">
+                    <span>Category</span>
+                    <br>
+                    <label for="category1">Choose a category:</label>
+                    <select name="category1" id="category1">
+                        <option value="Personal">Personal</option>
+                        <option value="Work">Work</option>
+                        <option value="School">School</option>
+                        <option value="Cleaning">Cleaning</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
 
-            <div class="date">
-                <span>Due Date</span>
-                <br>
-                <input type="date">
+                <div class="date">
+                    <span>Due Date</span>
+                    <br>
+                    <input type="date" name="dueDate">
+                </div>
+                <hr>
             </div>
-            <hr>
-        </div>
-        <div>
-            <hr>
-            <button class="task" type="submit">+ Add Task</button>
-            <hr>
-        </div>
+            <div>
+                <hr>
+                <button class="task" type="submit">+ Add Task</button>
+                <hr>
+            </div>
     </div>
-
+    </form>
     <div class="tasks">
-        
+        <% for(let i of task_list) { %>
+            <div class="card">
+                <h2>
+                    <%=i.Description %>
+                        <span class="dept">
+                            <%=i.category1 %>
+                        </span>
+                        <a href="/delete-task/<%=i._id %>" class="remove">Delete</a>
+
+                </h2>
+                <%=i.dueDate %>
+
+                    <hr>
+            </div>
+            <% } %>
     </div>
 </body>
 

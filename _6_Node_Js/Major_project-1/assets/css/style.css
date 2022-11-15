@@ -67,5 +67,33 @@ span {
   height: 350px;
   width: 50%;
   background-color: white;
-  margin:0 auto;
+  margin: 0 auto;
+  overflow-y: scroll;
+position:relative;
+}
+
+/* card styling */
+.card {
+  max-width: 97%;
+  height: 55px;
+  background-color: white;
+  margin-left: 12px;
+}
+
+.remove{
+  position: absolute;
+  margin-left: 22%;
+  text-decoration: none;
+  color:red;
+  font-size: 20px;
+}
+
+
+.dept {
+  width: 60px;
+  height: 40px;
+  background-color: rgb(16, 75, 94);
+  color: rgb(255, 255, 255);
+  font-size:20px;
+  border:1px solid black;
 }

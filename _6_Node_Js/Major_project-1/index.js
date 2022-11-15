@@ -8,6 +8,8 @@ app.set('views' , './views');
 
 // requiring the connection between mongoose and mongodb
 const db = require('./config/mongoose');
+// parser
+app.use(express.urlencoded());
 // to use static files
 app.use(express.static('./assets'));
 // ṣending all the request to the home router
