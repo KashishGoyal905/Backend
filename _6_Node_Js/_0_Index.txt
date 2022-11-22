@@ -101,3 +101,36 @@
 
         # deleting the data:
             take the id from the contact and delete by method and then redirect.
+
+# made a todo app project named as major project.
+
+# getting started with authentication
+
+    # Manually:
+        1) we need to create a user , so make user schema, we will also use timestamps this time
+        which mean we wil get when user is created or updated at.
+        2)sign in/ sign up page routes and all 
+        3) creating forms on sign in and sign up pages.
+        #cookies:
+            a file that is stored by the browser, and set to the every request
+            it is used for storing data, for later use, and establish user identity
+        4) nedd a cookie-parser for reading and writing into the cookies.
+        5) require it and then middleware it.
+        6) now sign up creation: check password and confirm pass are same. then user.findone and create user
+        7) sign in create session: find user, handle user find, handle session creation, handle user found.
+        8) profile page. 
+
+    # Using Library:
+        1) npm i passport and npm i passport-local (for local autehntication of username and pass only)
+        2) in config/passport-local-strategy.js 
+        3) require passport,local strategy,user schema then authencate it then two serializer and deserealizer
+           functions and then export it.
+        4)  now we need to create session by setting up the cookies.
+        5) we use library express-session
+        6) in main file we require the express session, passport and passport-local, then a middleware
+        to encrypt the cookie, the use the passport then set the cokkie into the folder.
+        7) create two function in local-passport file to checkauth and set the user in locals
+        8) use the function setauthenticatd user int he main file.
+        9) we need to use mongo store to have session store in the database.
+        10) require mongo store, and in the function for encrypting store mongoose connection, and a callback function
+        11) to logout-> req.logout.

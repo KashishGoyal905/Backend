@@ -7,7 +7,8 @@ const router = express.Router();
 const homeController = require('../controllers/home_controller');
 
 router.get('/', homeController.home);
-router.use('/users', require('./users'));
-
+router.post('/create-task', homeController.task);
+router.get('/delete-task/:id', homeController.delete);
+router.use('/users' , require('./users'));
 // exporting
 module.exports = router;
